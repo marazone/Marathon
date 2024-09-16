@@ -34,7 +34,7 @@ const RecordList: React.FC<RecordListProps> = ({ dates }) => {
             .then((res) => {
                 setLoading(false)
                 console.log(res)
-                navigate(`/recordprint/${compCode}/${bibNum}`)
+                navigate(`/recordinfo/${compCode}/${bibNum}`)
             })
                 
             .catch((err) => {
@@ -44,7 +44,7 @@ const RecordList: React.FC<RecordListProps> = ({ dates }) => {
                     icon: 'warning',
                     title: '기록이 존재하지 않습니다.'
                 });
-                navigate(`/recordprint/${compCode}/${bibNum}`)
+                navigate(`/recordinfo/${compCode}/${bibNum}`)
             });
     };
     const medalCheck = () => {

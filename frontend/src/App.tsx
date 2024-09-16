@@ -15,6 +15,8 @@ import MailPage from './pages/AllThatPage/MailPage';
 import MedalPage from './pages/AllThatPage/MedalPage';
 import PhotowallPage from './pages/AllThatPage/PhotowallPage';
 import MarazonPage from './pages/AllThatPage/MarazonPage';
+import RecordInfoPage from './pages/RecordPage/RecordInfoPage';
+import QRcodePage from './pages/QRcodePage/QRcodePage';
 import RecordPrintPage from './pages/RecordPage/RecordPrintPage';
 
 function App() {
@@ -37,9 +39,12 @@ function App() {
         <Route path='/schedule' element={<SchedulePage/>}/>
         {/* 기록조회 */}
         <Route path='/record' element={<RecordPage/>}/>
+        <Route path='/recordinfo/:compCode/:bibNum' element={<RecordInfoPage/>}/>
         <Route path='/recordprint/:compCode/:bibNum' element={<RecordPrintPage/>}/>
         {/* 대회등록 */}
         <Route path='/register' element={<RegisterPage/>}/>
+        {/* 각인QR생성 */}
+        <Route path='/qrcode' element={<QRcodePage/>}/>
         {/* 저작권 */}
         <Route path='/copyright' element={<CopyrightPage/>}/>
       </Routes>

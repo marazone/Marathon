@@ -97,6 +97,11 @@ const MobileNav: React.FC = () => {
             <ListItemText primary="대회 등록" />
           </ListItemButton>
         </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component={Link} to="/qrcode">
+            <ListItemText primary="각인 QR생성" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );

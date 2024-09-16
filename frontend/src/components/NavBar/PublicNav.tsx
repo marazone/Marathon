@@ -110,6 +110,13 @@ const PublicNav = () => {
           >
             대회 등록
           </NavLink>
+          <NavLink
+            to="/qrcode"
+            className="font-bold text-xl text-white"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            각인 QR생성
+          </NavLink>
         </div>
       </div>
     </div>
