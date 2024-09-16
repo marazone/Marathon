@@ -16,6 +16,7 @@ import MedalPage from './pages/AllThatPage/MedalPage';
 import PhotowallPage from './pages/AllThatPage/PhotowallPage';
 import MarazonPage from './pages/AllThatPage/MarazonPage';
 import RecordPrintPage from './pages/RecordPage/RecordPrintPage';
+import QRcodePage from './pages/QRcodePage/QRcodePage';
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
         <Route path='/recordprint/:compCode/:bibNum' element={<RecordPrintPage/>}/>
         {/* 대회등록 */}
         <Route path='/register' element={<RegisterPage/>}/>
+        {/* 각인QR생성 */}
+        <Route path='/qrcode' element={<QRcodePage/>}/>
         {/* 저작권 */}
         <Route path='/copyright' element={<CopyrightPage/>}/>
       </Routes>

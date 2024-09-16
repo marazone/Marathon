@@ -10,9 +10,14 @@ const RecordPrint = () => {
     const imageRef = useRef(null);
     const textRef = useRef(null);
     const [userName,setUserName] = useState('김성준')
-    const [compTitle, setCompTitle] = useState('')
+    const [gender, setGender] = useState('M')
+    const [compTitle, setCompTitle] = useState('어울림 마라톤 대회')
     const [compDivLs, setCompDivLs] = useState('5km')
     const [compRecord, setCompRecord] = useState('기록이 없습니다.')
+    const [startRecord, setStartRecord] = useState('00:00:00')
+    const [arrivalRecord, setArrivalRecord] = useState('00:00:00')
+    const [totalRank, setTotalRank] = useState('1/450')
+    const [genderRank, setGenderRank] = useState('1/450')
 
     const handleDownload = async () => {
         const element = document.getElementById('canvas-container');
@@ -45,7 +50,7 @@ const RecordPrint = () => {
     return (
         <div>
             <div className='flex justify-center '>
-                <div className='mt-8 mb-8 me-16'>
+                {/* <div className='mt-8 mb-8 me-16'>
                     <div id="canvas-container" style={{ position: 'relative', display: 'inline-block' }}>
                         <img
                             ref={imageRef}
@@ -67,14 +72,19 @@ const RecordPrint = () => {
                         </div>
                     </div>
                     
-                </div>
-                <div className='text-[30px] mt-20 w-[500px] gap-[80px] flex flex-col'>
-                    <div>대회명 : {compTitle}</div>
-                    <div>선수 이름 : {userName}</div>
-                    <div>종목 : {compDivLs}</div>
-                    <div>배번호 : {bibNum}</div>
-                    <div>기록 : {compRecord}</div>
-                    <Button size="lg" onClick={handleDownload} color='blue' className='text-xl self-center'>이미지 다운로드</Button>
+                </div> */}
+                <div className='mt-20 w-[1000px] ph:w-3/4 gap-[80px] flex flex-col bg-light-blue-50  mb-28'>
+                    <div className='text-3xl font-semibold text-center mt-10'>{compTitle}</div>
+                    <div className='flex justify-around'>
+                        <div>
+                            <div className='text-xl font-bold'>{userName}</div>
+                            <div className=' text-blue-500'># {bibNum}</div>
+                        </div>
+                        <div className='text-xl '>종목 : {compDivLs}</div>
+                    </div>
+                    <div className='text-2xl font-bold text-center text-blue-700 mb-36 '>기록 : {compRecord}</div>
+                    
+                    {/* <Button size="lg" onClick={handleDownload} color='blue' className='text-xl self-center'>이미지 다운로드</Button> */}
                 </div>
             </div>
         </div>
